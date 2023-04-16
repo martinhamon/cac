@@ -1,10 +1,12 @@
 html,
 body {
-    font-family: sans-serif;
+    font-family: 'Times New Roman', Times, serif;
     height: 100%;
     display: flex;
     flex-direction: column;
     margin: 0;
+    font-size: large;
+    color: #969494;
 }
 
 
@@ -98,4 +100,32 @@ footer {
 
   article {
     flex: 1;
+  }
+
+
+  .wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    grid-auto-rows: minmax(100px, auto);
+    text-align: center;
+    
+  }
+ 
+  .one {
+    
+    grid-row: 1;
+    background-color: #04AA6D;
+  }
+  .items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    ;
+  }
+  
+  div img{
+  border-radius: 30px;
+    max-width:50%;
+    max-height:50%;
   }
