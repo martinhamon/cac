@@ -13,7 +13,7 @@ body {
 
 header {
 
-    background-color: #333;
+    background-color: #000000;
 
 
 }
@@ -21,7 +21,7 @@ header {
 header h1 {
 
     text-align: center;
-    color: white;
+   
     line-height: 100px;
     margin: 0;
 
@@ -36,7 +36,7 @@ section {
 
 footer {
     margin-top: auto;
-    background-color: #333;
+    background-color: #000000;
 
 }
 
@@ -137,3 +137,26 @@ footer {
     flex: 1;
   }
 
+  #if {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .animation {
+    animation-duration: 1.5s;
+    animation-name: slidein;
+    animation-timing-function: linear;
+  }
+  @keyframes slidein {
+    from {
+      margin-left: 100%;
+      
+    }
+  
+    to {
+      margin-left: 0%;
+      
+    }
+  }
