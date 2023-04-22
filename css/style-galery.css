@@ -12,16 +12,17 @@ body {
 header {
 
   background-color: #333;
-
+  display: flex;
 
 }
 
-header h1 {
+header h3 {
 
   text-align: center;
-  color: white;
+
   line-height: 100px;
   margin: 0;
+  margin: auto;
 
 }
 
@@ -40,11 +41,7 @@ flex-flow: column;
 
 }
 
-article img {
-  width: 80%;
-  height:150px;
 
-}
 
 article button {
   width: 80%;
