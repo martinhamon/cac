@@ -57,18 +57,18 @@
             const queryString = window.location.search;
             const urlParams = new URLSearchParams(queryString);
             const id = urlParams.get('id');
-            let arr = JSON.parse( localStorage.news_array)['articles'];
+            let arr = JSON.parse( localStorage.news_array);
 
           
             $('#section').append(
                               "<article>"+
-                                '  <center><img  class="im-art" src="'+arr[id]['urlToImage']+'" alt=""></center>'+
+                                '  <center><img  class="im-art" src="'+arr[id]['image']+'" alt=""></center>'+
                                 '<h5>'+arr[id]['title']+'</h5>'+
                                 
                                 
-                                '   <p>'+arr[id]['content']+'  </p>'+
-                                '   <p>Fecha de publicacion: '+arr[id]['publishedAt']+'  </p>'+
-                                '   <p>Autor: '+arr[id]['author']+'  </p>'+
+                                '   <p>'+arr[id]['description']+'  </p>'+
+                                '   <p>Category: '+arr[id]['category']+'  </p>'+
+                                '   <p>Price: '+arr[id]['price']+'  </p>'+
                                   ' <button onclick="location.href=\'galery.html\'">'+
                                   ' <i class="fas fa-arrow-left" aria-hidden="true"></i> &nbsp;Volver</button>'+
                                   "   </article>" );
