@@ -30,7 +30,7 @@ header h3 {
 article {
   padding: 10px;
   margin: 10px;
-  background-color: aqua;
+  background-color: none;
   width: 200px;
   border: 2px solid gray;
   border-radius: 5px;
