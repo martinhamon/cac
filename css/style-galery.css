@@ -5,23 +5,23 @@ body {
   display: flex;
   flex-direction: column;
   margin: 0;
-}
+  font-size: large;
+  color: #969494;
 
+}
 
 
 header {
 
-  background-color: #333;
-
+  background-color: #000000;
+  display: flex;
 
 }
 
-header h1 {
+header h3 {
 
   text-align: center;
-  color: white;
-  line-height: 100px;
-  margin: 0;
+  margin: auto;
 
 }
 
@@ -34,16 +34,17 @@ article {
   width: 200px;
   border: 2px solid gray;
   border-radius: 5px;
-display: flex;
-flex-flow: column;
+ display: flex;
+ flex-flow: column;
+
 
 
 }
 
-article img {
-  width: 80%;
-  height:150px;
-
+.im-art{
+  border-radius: 10%;
+  max-width: 80%;
+  max-height: 60%;
 }
 
 article button {
@@ -121,7 +122,9 @@ color: #969494;
 
 .topnav .icon {
   display: none;
+  color: #f2f2f2;
 }
+
 
 /*Si se achica de 600 px*/
 @media screen and (max-width: 600px) {
@@ -130,7 +133,12 @@ color: #969494;
   .topnav a:not(:first-child) {
     display: none;
   }
+ 
+  .topnav {
+    width: 80%;
+  }
 
+ 
   .topnav a.icon {
     float: right;
     display: block;
@@ -153,4 +161,39 @@ color: #969494;
     display: block;
     text-align: left;
   }
+  .topnav.responsive {
+    position: relative;
+  }
+  a.icon {
+    display: flex;
+    flex: 1;
+    width: auto;
+    justify-content: center;
+    padding-top: 10px;
+    background-color: #333;
+    text-decoration: none;
+  }
+  header h3 {
+    display: none;
+  }
+
+  header img {
+    display: none;
+  }
+}
+@media screen and (min-width: 600px) {
+  .fa {
+
+    display: none;
+  }
+
+
+}
+.fa {
+  color: #131212;
+  ;
+}
+
+.fa-shopping-bag{
+  display: inline;
 }
