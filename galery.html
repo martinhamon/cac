@@ -54,23 +54,23 @@
                 //https://newsapi.org/docs/endpoints/everything
                 //fe3f4ba18ac14662ae783f0184ca7bd5
                 $.ajax({
-                    url: 'http://newsapi.org/v2/everything?q=apple&language=es&pageSize=10&from=2023-05-15&to=2023-05-15&sortBy=popularity&apiKey=fe3f4ba18ac14662ae783f0184ca7bd5',
+                    url: 'https://fakestoreapi.com/products?limit=10',
                     type: 'GET',
                     success: function (result) {
-                      console.log(result['articles'][0]);
+                      console.log(result[0]);
                       let id=0;
                         if (result)
                         {
                           localStorage.setItem('news_array', JSON.stringify(result));
-                          result['articles'].forEach(element => {
+                          result.forEach(element => {
                             
                             $('#section').append(
                               "<article>"+
-                                '  <center><img class="im-art" src="'+element['urlToImage']+'" alt=""></center>'+
+                                '  <center><img class="im-art" style="width:150px;height:150px" src="'+element['image']+'" alt=""></center>'+
                                 '<h5>'+element['title']+'</h5>'+
                                 
                                 
-                                '   <p>'+element['description']+'  </p>'+
+                                '   <p>'+element['category']+'  </p>'+
                                   ' <button onclick="location.href=\'complete.html?id='+id+'\'">'+
                                   ' <i class="fas fa-file" aria-hidden="true"></i> &nbsp;Ver mas</button>'+
                                   "   </article>" );
