@@ -54,7 +54,7 @@
                 //https://newsapi.org/docs/endpoints/everything
                 //fe3f4ba18ac14662ae783f0184ca7bd5
                 $.ajax({
-                    url: 'https://newsapi.org/v2/everything?q=apple&language=es&pageSize=10&from=2023-05-15&to=2023-05-15&sortBy=popularity&apiKey=fe3f4ba18ac14662ae783f0184ca7bd5',
+                    url: 'http://newsapi.org/v2/everything?q=apple&language=es&pageSize=10&from=2023-05-15&to=2023-05-15&sortBy=popularity&apiKey=fe3f4ba18ac14662ae783f0184ca7bd5',
                     type: 'GET',
                     success: function (result) {
                       console.log(result['articles'][0]);
