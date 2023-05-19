@@ -1,25 +1,52 @@
-html,
+/*css*/ 
+html {
+  
+  max-height: 100%;
+ 
+  box-sizing: border-box;
+}
+
 body {
-  font-family: 'Times New Roman', Times, serif !important;
+  font-family: 'Times New Roman', Times, serif;
   height: 100%;
   display: flex;
   flex-direction: column;
   margin: 0;
-  font-size: large !important;
-  color: #969494 !important;
-  line-height: unset;
+  font-size: large;
+  color: #969494;
+ 
 
 }
 
-
-
-header {
  
-  background-color: #000000;
+header {
+
+ 
   display: flex;
+ 
+  z-index: 1;
+  position: absolute;
+  min-width: 100%;
+}
+.bck-img {
+  
+  background-color: white;
+    
   
  
-
+    border-color: green;
+    border-width: 1px;
+    max-height: 300px; /* cambiar hasta adaptar (puede ser 100%) */
+    width: 100% !important;
+   
+    position: relative /* es importante porque tiene hijo absoluto */
+  
+}
+.banner{
+  /*display: block;*/
+  width: 100%;
+  height: 80%;;
+  object-fit: fill; /* importante para acomodar la imágen */
 }
 
 header h3 {
@@ -40,9 +67,8 @@ section {
 
 footer {
   margin-top: auto;
-  background-color: #333;
-  font-size: large;
-  color: #969494;
+  background-color: #000000;
+
 }
 
 .fot {
@@ -50,16 +76,13 @@ footer {
 
 }
 
-.topnav {
 
-  background-color: #333;
-
-}
 
 .topnav a {
   float: left;
   display: block;
-  color: #f2f2f2;
+  color: #f8f8f8;
+  text-shadow: #000000;
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
@@ -88,34 +111,42 @@ footer {
   .topnav a:not(:first-child) {
     display: none;
   }
-
   .topnav {
     width: 80%;
+    
+  }
+.topnav a {
+  color: black;
+}
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+
+  
+}
+
+@media screen and (max-width: 600px) {
+  .topnav.responsive {
+    position: relative;
+  }
+  a.icon {
+    display: flex;
+    flex: 1;
+    width: auto;
+    justify-content: center;
+    padding-top: 10px;
+    
+    text-decoration: none;
+  }
+  header h3 {
+    display: none;
+  }
+
+  header img {
+    display: none;
   }
 }
-  @media screen and (max-width: 600px) {
-    .topnav.responsive {
-      position: relative;
-    }
-
-    a.icon {
-      display: flex;
-      flex: 1;
-      width: auto;
-      justify-content: center;
-      padding-top: 10px;
-      background-color: #333;
-      text-decoration: none;
-    }
-
-    header h3 {
-      display: none;
-    }
-
-    header img {
-      display: none;
-    }
-  }
 
   .topnav a.icon {
     float: right;

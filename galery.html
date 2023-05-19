@@ -5,30 +5,43 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+  
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css" integrity="sha512-YWzhKL2whUzgiheMoBFwW8CKV4qpHQAEuvilg9FAn5VJUDwKZZxkJNuGM4XkWuk94WCrrwslk8yWNGmY1EduTA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
   <link rel="stylesheet" href="css/style-galery.css">
   <title>TP</title>
 </head>
 
 <body>
+  <div class="bck-img">
+    <img class="banner" src="images/banner.png" alt="">
+
+  </div>
   <header>
-    
+      
     <div class="topnav" id="myTopnav">
       <a href="index.html" >Home</a>
       <a href="galery.html" class="active">Galeria</a>
       <a href="contact.html">Contacto</a>
-      
-      
-     
+
+
+
     </div>
     <h3>TP - CODO A CODO </h3>
-    <img src="images/cac.png" alt="" width="auto" height="auto">
+    <img id="cac" src="images/cac.png" alt="" width="auto" height="auto">
     <a href="javascript:void(0);" class="icon" onclick="myFunction()">
       <i class="fa fa-bars"></i>
     </a>
-  </header>
+    
+</header>
   <section id="section">
-  
+   
+    <div id="spinner" class="qspinner qspinner-1020"   style="height:200px"  >
+     <img src="js/19.gif" 
+     style="position: absolute; margin-left: -50px; left: 50%; margin-top: -50px; top: 50%;">
+    </div>
+
+
   </section>
 
   <footer>
@@ -40,6 +53,8 @@
 
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+  <script src="js/jquery-qspin.js"></script>
+
   <script>
     function myFunction() {
       var x = document.getElementById("myTopnav");
@@ -53,6 +68,8 @@
     $( document ).ready( function() {
                 //https://newsapi.org/docs/endpoints/everything
                 //fe3f4ba18ac14662ae783f0184ca7bd5
+             
+
                 $.ajax({
                     url: 'https://fakestoreapi.com/products?limit=10',
                     type: 'GET',
@@ -82,7 +99,7 @@
 
                           
                         }
-
+                          $('#spinner').toggleClass("hideclass");
                     },
                     error: function (error) {
                         console.log(error);
@@ -93,8 +110,11 @@
                 });
 
                 
+                var lOptions = {
+        targetElement : $('body')
+    };
 
-        
+   
     } )
   </script>
   
