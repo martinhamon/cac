@@ -1,12 +1,4 @@
-
-/*css*/ 
-html {
-  
-  max-height: 100%;
- 
-  box-sizing: border-box;
-}
-
+html,
 body {
   font-family: 'Times New Roman', Times, serif;
   height: 100%;
@@ -19,8 +11,7 @@ body {
 
 }
 
-
-
+ 
 header {
 
  
@@ -44,12 +35,7 @@ header {
     position: relative /* es importante porque tiene hijo absoluto */
   
 }
-.banner{
-  display: block;
-  width: 100%;
-  
-  object-fit: fill; /* importante para acomodar la imágen */
-}
+
 header h3 {
 
   text-align: center;
@@ -77,8 +63,10 @@ footer {
 
 }
 
-.topnav, #cac {
-  margin: 4px;
+.topnav {
+
+  background-color: #333;
+
 }
 
 .topnav a {
@@ -146,13 +134,16 @@ footer {
     display: none;
   }
 
-  header img {
-    display: none;
+    header img {
+      display: none;
+    }
   }
-}
- 
 
-  
+  .topnav a.icon {
+    float: right;
+    display: block;
+  }
+
 
   .fa {
     color: #131212;
